@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>السيارات والحجوزات - موقع تأجير السيارات</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- Load jQuery Library -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Load External JavaScript Functions File -->
+    <script type="text/javascript" src="myFunctions.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>قائمة السيارات المتاحة للتأجير</h1>
+        <p>اختر السيارات التي تناسبك وقدم طلب حجزك الإلكتروني بكل سهولة</p>
+    </header>
+
+    <nav>
+        <a href="home.html">الصفحة الرئيسية</a>
+        <a href="AboutUs.html">من نحن</a>
+        <a href="Cars.html">السيارات والحجوزات</a>
+    </nav>
+
+    <div class="container">
+        <h2>اختر سيارتك المفضلة</h2>
+        
+        <form id="car-form" onsubmit="return validateForm();">
+            <table>
+                <tr>
+                    <th>صورة السيارة</th>
+                    <th>اختيار</th>
+                    <th>الرمز</th>
+                    <th>الموديل</th>
+                    <th>سنة الصنع</th>
+                    <th>السعر اليومي</th>
+                    <th>إظهار التفاصيل</th>
+                </tr>
+                <!-- Item 1 - امتداد png -->
+                <tr>
+                    <td><img src="images/car1.png" alt="Toyota Corolla" width="90" height="60" /></td>
+                    <td><input type="checkbox" class="car-select" name="car" value="CR-001" /></td>
+                    <td>CR-001</td>
+                    <td class="car-model">Toyota Corolla</td>
+                    <td>2023</td>
+                    <td class="car-price" data-price="250000">250,000 ل.س</td>
+                    <td>
+                        <button type="button" class="toggle-details">إظهار التفاصيل</button>
+                        <div class="car-details">نوع الوقود: بنزين | ناقل الحركة: أوتوماتيك | عدد المقاعد: 5 | المسافة المقطوعة: 20,000 كم | اللون: أبيض</div>
+                    </td>
+                </tr>
+                <!-- Item 2 - امتداد png -->
+                <tr>
+                    <td><img src="images/car2.png" alt="Kia Sportage" width="90" height="60" /></td>
+                    <td><input type="checkbox" class="car-select" name="car" value="CR-002" /></td>
+                    <td>CR-002</td>
+                    <td class="car-model">Kia Sportage</td>
+                    <td>2022</td>
+                    <td class="car-price" data-price="400000">400,000 ل.س</td>
+                    <td>
+                        <button type="button" class="toggle-details">إظهار التفاصيل</button>
+                        <div class="car-details">نوع الوقود: بنزين | ناقل الحركة: أوتوماتيك | عدد المقاعد: 5 | المسافة المقطوعة: 35,000 كم | اللون: أسود</div>
+                    </td>
+                </tr>
+                <!-- Item 3 - امتداد png -->
+                <tr>
+                    <td><img src="images/car3.png" alt="Hyundai Elantra" width="90" height="60" /></td>
+                    <td><input type="checkbox" class="car-select" name="car" value="CR-003" /></td>
+                    <td>CR-003</td>
+                    <td class="car-model">Hyundai Elantra</td>
+                    <td>2024</td>
+                    <td class="car-price" data-price="300000">300,000 ل.س</td>
+                    <td>
+                        <button type="button" class="toggle-details">إظهار التفاصيل</button>
+                        <div class="car-details">نوع الوقود: بنزين | ناقل الحركة: عادي | عدد المقاعد: 5 | المسافة المقطوعة: 5,000 كم | اللون: فضي</div>
+                    </td>
+                </tr>
+                <!-- Item 4 - امتداد png -->
+                <tr>
+                    <td><img src="images/car4.png" alt="Chevrolet Spark" width="90" height="60" /></td>
+                    <td><input type="checkbox" class="car-select" name="car" value="CR-004" /></td>
+                    <td>CR-004</td>
+                    <td class="car-model">Chevrolet Spark</td>
+                    <td>2021</td>
+                    <td class="car-price" data-price="180000">180,000 ل.س</td>
+                    <td>
+                        <button type="button" class="toggle-details">إظهار التفاصيل</button>
+                        <div class="car-details">نوع الوقود: بنزين | ناقل الحركة: أوتوماتيك | عدد المقاعد: 4 | المسافة المقطوعة: 50,000 كم | اللون: أحمر</div>
+                    </td>
+                </tr>
+                <!-- Item 5 - امتداد png -->
+                <tr>
+                    <td><img src="images/car5.png" alt="Renault Duster" width="90" height="60" /></td>
+                    <td><input type="checkbox" class="car-select" name="car" value="CR-005" /></td>
+                    <td>CR-005</td>
+                    <td class="car-model">Renault Duster</td>
+                    <td>2023</td>
+                    <td class="car-price" data-price="350000">350,000 ل.س</td>
+                    <td>
+                        <button type="button" class="toggle-details">إظهار التفاصيل</button>
+                        <div class="car-details">نوع الوقود: ديزل | ناقل الحركة: عادي | عدد المقاعد: 5 | المسافة المقطوعة: 15,000 كم | اللون: كحلي</div>
+                    </td>
+                </tr>
+            </table>
+
+            <br />
+            <button type="button" id="btn-continue">متابعة لتعبئة بيانات الحجز</button>
+
+            <!-- Booking Form Section -->
+            <div id="booking-form-section" style="display:none; margin-top:30px;">
+                <fieldset>
+                    <legend>نموذج طلب حجز السيارات الإلكتروني</legend>
+
+                    <div class="form-group">
+                        <label for="fullname">الاسم الكامل (أحرف عربية فقط):</label>
+                        <input type="text" id="fullname" name="fullname" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="national_id">الرقم الوطني (11 خانة - يبدأ من 01 إلى 14):</label>
+                        <input type="text" id="national_id" name="national_id" maxlength="11" />
+                    </div>
+
+                    <!-- تم ضبط الحقول لعرض وتسهيل الإدخال بالتنسيق المطلوب -->
+                    <div class="form-group">
+                        <label for="start_date">تاريخ بداية التأجير (اليوم - الشهر - السنة):</label>
+                        <input type="date" id="start_date" name="start_date" style="direction: ltr; text-align: right;" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="end_date">تاريخ نهاية التأجير (اليوم - الشهر - السنة):</label>
+                        <input type="date" id="end_date" name="end_date" style="direction: ltr; text-align: right;" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mobile">رقم الموبايل (Syriatel أو MTN):</label>
+                        <input type="text" id="mobile" name="mobile" placeholder="09xxxxxxxx" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني (اختياري):</label>
+                        <input type="email" id="email" name="email" />
+                    </div>
+
+                    <br />
+                    <input type="submit" value="إرسال طلب الحجز" />
+                </fieldset>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2026 - مجموعة العمل SVU</p>
+    </footer>
+
+</body>
+</html>

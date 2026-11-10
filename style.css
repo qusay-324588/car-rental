@@ -1,0 +1,142 @@
+/* Unified styling for the Car Rental website */
+body {
+    font-family: 'Tahoma', Arial, sans-serif;
+    font-size: 16px;
+    color: #333333;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    text-align: right;
+}
+
+header {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #34495e;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #1abc9c;
+}
+
+.container {
+    width: 85%;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Advanced Fieldset and Form styling */
+fieldset {
+    border: 2px solid #2c3e50;
+    border-radius: 6px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: #2c3e50;
+    padding: 0 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333333;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Tahoma', Arial, sans-serif;
+    text-align: right;
+}
+
+input[type="submit"], button {
+    background-color: #1abc9c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover, button:hover {
+    background-color: #16a085;
+}
+
+.car-details {
+    display: none;
+    background-color: #ecf0f1;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #c0392b;
+    text-align: right;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #2c3e50;
+    color: white;
+    margin-top: 30px;
+}
